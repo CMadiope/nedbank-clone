@@ -6,16 +6,11 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
 import OnClickMenu from "./OnClickMenu";
 
-const Navbar = () => {
+const Navbar = ({ showMenu, handleMenu }) => {
   const [showModal, setShowModal] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
 
   const handleModal = () => {
     setShowModal(!showModal);
-  };
-
-  const handleMenu = () => {
-    setShowMenu(!showMenu);
   };
 
   return (

@@ -20,7 +20,7 @@ const OnClickMenu = () => {
       opacity:1,
       x:0,
       transition:{
-        delay:1.1,
+        
         duration:1.1
       }
     },
@@ -76,7 +76,7 @@ const OnClickMenu = () => {
         </div>
       </div>
       {/* tablet and above */}
-      <motion.div className='max-md:hidden grid grid-cols-3 md:h-screen md:w-full py-16 px-12 gap-12'
+      <motion.div className='max-md:hidden grid grid-cols-3 md:min-h-screen md:w-full py-16 px-12 gap-12 overflow-y-hidden'
       initial='initial'
       animate='animation'
       variants={containerVariants}

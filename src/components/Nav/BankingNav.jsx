@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import BankingModal from "./BankingModal";
 
-const BankingNav = () => {
+const BankingNav = ({showMenu}) => {
   const [isBankHovering, setIsBankHovering] = useState(false);
   const [isSaveHovering, setIsSaveHovering] = useState(false);
   const [isBorrowHovering, setIsBorrowHovering] = useState(false);
@@ -62,7 +62,11 @@ const BankingNav = () => {
   };
 
   return (
-    <div className='bg-white md:flex gap-8 hidden  pl-40 py-4'>
+    <div
+      className={`bg-white md:flex gap-8 hidden  pl-40 py-4 ${
+        showMenu ? "md:hidden" : ""
+      }`}
+    >
       <div
         className='flex items-center gap-1 text-gray-500  cursor-pointer hover:border-b-4 transition border-green-900 pb-4 relative'
         onMouseOver={handleBankMouseOver}
