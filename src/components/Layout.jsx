@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Navbar from './Nav/Navbar'
 import BankingNav from './Nav/BankingNav'
+import Footer from './Footer';
 
 const Layout = ({children}) => {
 
@@ -15,6 +16,7 @@ const Layout = ({children}) => {
       <Navbar showMenu={showMenu} handleMenu={handleMenu} />
       <BankingNav showMenu={showMenu}  />
       {children}
+      <Footer/>
     </div>
   );
 }
