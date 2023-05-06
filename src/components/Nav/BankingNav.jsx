@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import BankingModal from "./BankingModal";
+import { useRouter } from "next/router";
 
-const BankingNav = ({showMenu}) => {
+const BankingNav = ({ showMenu }) => {
   const [isBankHovering, setIsBankHovering] = useState(false);
   const [isSaveHovering, setIsSaveHovering] = useState(false);
   const [isBorrowHovering, setIsBorrowHovering] = useState(false);
   const [isInsuranceHovering, setIsInsuranceHovering] = useState(false);
-   const [isPlanHovering, setIsPlanHovering] = useState(false);
-   const [isLearnHovering, setIsLearnHovering] = useState(false);
-   const [isContactHovering, setIsContactHovering] = useState(false);
+  const [isPlanHovering, setIsPlanHovering] = useState(false);
+  const [isLearnHovering, setIsLearnHovering] = useState(false);
+  const [isContactHovering, setIsContactHovering] = useState(false);
+  const router = useRouter();
 
   const handleBankMouseOver = () => {
     setIsBankHovering(true);
@@ -65,7 +67,9 @@ const BankingNav = ({showMenu}) => {
     <div
       className={`bg-white md:flex gap-8 hidden  pl-40 py-4 ${
         showMenu ? "md:hidden" : ""
-      }`}
+      }
+      ${router.pathname == "/private" ? "md:hidden" : ""}
+      `}
     >
       <div
         className='flex items-center gap-1 text-gray-500  cursor-pointer hover:border-b-4 transition border-green-900 pb-4 relative'
