@@ -40,7 +40,7 @@ const Navbar = ({ showMenu, handleMenu }) => {
                 ref={modalRef}
               >
                 <li>
-                  <Link href='/personal'>Personal</Link>
+                  <Link href='/'>Personal</Link>
                 </li>
                 <li>
                   <Link href='/private'>Private</Link>
@@ -61,7 +61,7 @@ const Navbar = ({ showMenu, handleMenu }) => {
           <div className={`${showMenu ? "hidden" : "block"}`}>
             <ul className='md:flex gap-6 hidden font-semibold'>
               <li>
-                <Link href='/personal'>Personal</Link>
+                <Link href='/'>Personal</Link>
               </li>
               <li>
                 <Link href='/private'>Private</Link>

@@ -69,6 +69,7 @@ const BankingNav = ({ showMenu }) => {
         showMenu ? "md:hidden" : ""
       }
       ${router.pathname == "/private" ? "md:hidden" : ""}
+      ${router.pathname == "/business" ? "md:hidden" : ""}
       `}
     >
       <div
