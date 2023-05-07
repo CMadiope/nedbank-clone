@@ -20,7 +20,7 @@ const Private = () => {
         <h1 className='text-center text-3xl md:text-4xl px-10 py-16 font-semibold text-green-950'>
           Welcome to the world of private offerings from Nedbank
         </h1>
-        <div className='flex flex-col md:flex-row justify-evenly pb-16 md:px-24 px-10'>
+        <div className='flex flex-col md:flex-row justify-evenly pb-16 md:px-24 sm:px-10'>
           <div className='px-10 md:text-lg'>
             <h3 className='text-xl md:text-2xl py-5 text-green-950 font-semibold text-center'>
               Private Clients

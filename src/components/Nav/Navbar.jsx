@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { AiOutlineLock, AiFillCaretDown } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
 import { RxCross1 } from "react-icons/rx";
@@ -8,10 +8,12 @@ import OnClickMenu from "./OnClickMenu";
 
 const Navbar = ({ showMenu, handleMenu }) => {
   const [showModal, setShowModal] = useState(false);
+  const modalRef = useRef();
 
   const handleModal = () => {
     setShowModal(!showModal);
   };
+  const selectValue = () => {};
 
   return (
     <nav className={` ${showMenu ? "bg-green-800" : "md:bg-[#f2f9f5]"} `}>
@@ -33,7 +35,10 @@ const Navbar = ({ showMenu, handleMenu }) => {
           {/* modal */}
           {showModal && (
             <div className='border text-left py-6 pr-16 pl-8 bg-white shadow-xl absolute top-12 left-24 md:hidden transition z-20'>
-              <ul className='flex flex-col text-sm gap-2 font-light  '>
+              <ul
+                className='flex flex-col text-sm gap-2 font-light  '
+                ref={modalRef}
+              >
                 <li>
                   <Link href='/personal'>Personal</Link>
                 </li>
